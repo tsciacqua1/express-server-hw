@@ -19,6 +19,6 @@ const errorHandler = (err, req, res, next) => {
 
 app.use(errorHandler);
 
-app.listen(PORT || 3001, () => {
+app.listen(PORT || 8080, () => {
   console.log(`server on port ${PORT}`);
 });
