@@ -6,6 +6,8 @@ require("./loaders");
 
 const { PORT } = process.env;
 
+const port = PORT || 8080;
+
 const app = express();
 
 app.use(express.json());
@@ -19,6 +21,6 @@ const errorHandler = (err, req, res, next) => {
 
 app.use(errorHandler);
 
-app.listen(PORT || 8080, () => {
-  console.log(`server on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`server on port ${port}`);
 });
